@@ -51,7 +51,7 @@ for url in product_page_links:
         print("{}) UPC-{} {} is priced ${} on Walmart website as on {}".format(i, upc, title, price, today))
         df.loc[len(df)] = [upc, title, price, today]
         # Outputting to the file
-        df.to_csv(os.path.join(directory+'/walmart_pricing_data_3943.csv'), index=False, encoding = 'utf-8', chunksize=1000000)
+        df.to_csv(os.path.join(directory+'/walmart_pricing_data.csv'), index=False, encoding = 'utf-8', chunksize=1000000)
     except:
         pass
 
