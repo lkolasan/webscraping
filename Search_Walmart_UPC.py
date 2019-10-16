@@ -16,6 +16,7 @@ upcs = pd.read_csv("---path to file with list of UPCs to scrape results for---")
 ##### extracting links of specific products pages ######
 product_page_links = []
 for i in upcs['UPC']:
+    #Use UPC to search Walmart Page and get the product page link from the result
     page = requests.get("https://www.walmart.com/search/?cat_id=0&query={}".format(str(i).zfill(14)[:13][-12:]),headers={"User-Agent":"Defined"})
     soup = BeautifulSoup(page.content, 'html.parser')
     divTag = soup.find_all("div", {"id": "mainSearchContent"})
