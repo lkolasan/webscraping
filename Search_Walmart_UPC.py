@@ -9,9 +9,9 @@ import pandas as pd
 import json
 from datetime import date
 today = date.today()
-directory = os.path.dirname(r"""C:/Users/lakshmana.kolasani/OneDrive - Fred's Inc/projects/Completed/webscraping_result/""")
+directory = os.path.dirname(r"---insert path to directory for saving output data---")
 
-upcs = pd.read_csv("C:/Users/lakshmana.kolasani/OneDrive - Fred's Inc/projects/Completed/webscraping_result/UPCs.csv")[['UPC']]
+upcs = pd.read_csv("---path to file with list of UPCs to scrape results for---")[['UPC']]
 
 ##### extracting links of specific products pages ######
 product_page_links = []
